@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bileis.github.io/2024/03/16/Hadoop%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2024-03-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bileis.github.io/2024/03/16/Linux/</loc>
     
     <lastmod>2024-03-16</lastmod>
@@ -146,14 +155,7 @@
 
   
   <url>
-    <loc>https://bileis.github.io/tags/c-%E5%90%88%E9%9B%86/</loc>
-    <lastmod>2024-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bileis.github.io/tags/MySql%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://bileis.github.io/tags/Linux%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -167,7 +169,21 @@
   </url>
   
   <url>
-    <loc>https://bileis.github.io/tags/Linux%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://bileis.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE-Hadoop-%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2024-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bileis.github.io/tags/c-%E5%90%88%E9%9B%86/</loc>
+    <lastmod>2024-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bileis.github.io/tags/MySql%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2024-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Hadoop基本概念与生态介绍</title>
+      <link href="/2024/03/16/Hadoop%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2024/03/16/Hadoop%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D/</url>
+      
+        <content type="html"><![CDATA[<h2 id="大数据概述"><a href="#大数据概述" class="headerlink" title="大数据概述"></a>大数据概述</h2><p>大数据（big data），指的是在一定时间范围内不能以常规软件工具处理（存储和计算）的大而复杂的数据集。说白了大数据就是使用单台计算机没法在规定时间内处理完，或者压根就没法处理的数据集。</p><h3 id="大数据的特性"><a href="#大数据的特性" class="headerlink" title="大数据的特性"></a>大数据的特性</h3><ul><li><p><code>大量 (Volume)</code></p></li><li><ul><li>大数据的“大”首先体现在数据量上。这意味着您需要处理海量、低密度的非结构化数据。这些数据的价值可能是未知的，例如 Twitter 数据流、网页或移动应用点击流，以及设备传感器所捕获的数据等等。在实际应用中，大数据的数据量通常高达数十 TB，甚至数百 PB。</li></ul></li><li><p><code>高速 (Velocity)</code></p></li><li><ul><li>大数据的“高速”指高速接收乃至处理数据 — 数据通常直接流入内存而非写入磁盘。在实际应用中，某些联网的智能产品需要实时或近乎实时地运行，要求基于数据实时评估和操作，而大数据只有具备“高速”特性才能满足这些要求。</li></ul></li><li><p><code>多样化 (Variety)</code></p></li><li><ul><li>多样化是指数据类型众多。通常来说，传统数据属于结构化数据，能够整齐地纳入关系数据库。随着大数据的兴起，各种新的非结构化数据类型不断涌现，例如文本、音频和视频等等，它们需要经过额外的预处理操作才能真正提供洞察和支持性元数据。</li></ul></li></ul><p>Hadoop 是用于处理大数据的工具之一。Hadoop 和其他软件产品通过特定的专有算法和方法来解释或解析大数据搜索的结果。</p><p><img src="/../images/hadoop/image-20240316204701930.png" alt="image-20240316204701930"></p><p>在大数据处理上，Hadoop并非是唯一的分布式处理架构，但是对于大部分的企业来说，<strong>基于Hadoop已经能够满足绝大部分的数据需</strong>求，因此才会成为现在的主流选择。</p><h2 id="Hadoop-概述"><a href="#Hadoop-概述" class="headerlink" title="Hadoop 概述"></a>Hadoop 概述</h2><p>Hadoop 是 Apache软件基金会下一个开源分布式计算平台，以 HDFS（Hadoop Distributed File System）、MapReduce（Hadoop2.0加入了YARN，Yarn是资源调度框架，能够细粒度的管理和调度任务，还能够支持其他的计算框架，比如spark）为核心的 Hadoop 为用户提供了系统底层细节透明的分布式基础架构。hdfs的高容错性、高伸缩性、高效性等优点让用户可以将Hadoop部署在低廉的硬件上，形成分布式系统。</p><p>是一个由 Apache 基金会所开发的分布式系统基础架构，主要解决海量数据的储存和海量数据的分析计算问题。广义上说，Hadoop 是一个更广泛的概念，Hadoop 生态圈。</p><h2 id="Hadoop-发行版本"><a href="#Hadoop-发行版本" class="headerlink" title="Hadoop 发行版本"></a>Hadoop 发行版本</h2><h4 id="Apache-Hadoop发行版"><a href="#Apache-Hadoop发行版" class="headerlink" title="Apache Hadoop发行版"></a>Apache Hadoop发行版</h4><ul><li>官方地址：<a href="https://hadoop.apache.org/">https://hadoop.apache.org</a></li></ul><p>Apache版本最原始（最基础）的版本，对于入门学习最好。</p><p><img src="/../images/hadoop/image-20240316204850323.png" alt="image-20240316204850323"></p><h4 id="DKhadoop发行版"><a href="#DKhadoop发行版" class="headerlink" title="DKhadoop发行版"></a>DKhadoop发行版</h4><ul><li>Github地址：<a href="https://github.com/dkhadoop/dk-fitting">https://github.com/dkhadoop/dk-fitting</a></li></ul><p>有效的集成了整个HADOOP生态系统的全部组件，并深度优化，重新编译为一个完整的更高性能的大数据通用计算平台，实现了各部件的有机协调。因此DKH相比开源的大数据平台，在计算性能上有了高达5倍（最大）的性能提升。DKhadoop将复杂的大数据集群配置简化至三种节点（主节点、管理节点、计算节点），极大的简化了集群的管理运维，增强了集群的高可用性、高可维护性、高稳定性。</p><p><img src="/../images/hadoop/image-20240316204921753.png" alt="image-20240316204921753"></p><h4 id="Cloudera发行版"><a href="#Cloudera发行版" class="headerlink" title="Cloudera发行版"></a>Cloudera发行版</h4><ul><li>官方地址：<a href="https://www.cloudera.com/products/open-source/apache-hadoop.html">https://www.cloudera.com/products/open-source/apache-hadoop.html</a></li></ul><p>CDH是Cloudera的hadoop发行版，完全开源，比Apache hadoop在兼容性，安全性，稳定性上有增强。</p><p><img src="/../images/hadoop/image-20240316205114191.png" alt="image-20240316205114191"></p><h4 id="Hortonworks发行版"><a href="#Hortonworks发行版" class="headerlink" title="Hortonworks发行版"></a>Hortonworks发行版</h4><ul><li>官方地址：<a href="https://www.cloudera.com/products/hdp.html">https://www.cloudera.com/products/hdp.html</a></li></ul><p>Hortonworks 的主打产品是Hortonworks Data Platform (HDP)，也同样是100%开源的产品，其版本特点：HDP包括稳定版本的Apache Hadoop的所有关键组件;安装方便，HDP包括一个现代化的，直观的用户界面的安装和配置工具。</p><p><img src="/../images/hadoop/image-20240316205236938.png" alt="image-20240316205236938"></p><h4 id="华为hadoop发行版"><a href="#华为hadoop发行版" class="headerlink" title="华为hadoop发行版"></a>华为hadoop发行版</h4><p>华为FusionInsight大数据平台是集Hadoop生态发行版、大规模并行处理数据库、大数据云服务于一体的融合数据处理与服务平台，拥有端到端全生命周期的解决方案能力。除了提供包括批处理、内存计算、流计算和MPPDB在内的全方位数据处理能力外，还提供数据分析挖掘平台、数据服务平台，帮助用户实现从数据到知识，从知识到智慧的转换，进而帮助用户从海量数据中挖掘数据价值。</p><p><img src="/../images/hadoop/image-20240316205258712.png" alt="image-20240316205258712"></p><h2 id="版本之间的区别"><a href="#版本之间的区别" class="headerlink" title="版本之间的区别"></a>版本之间的区别</h2><h4 id="Hadoop1-x-Hadoop2-x的演变"><a href="#Hadoop1-x-Hadoop2-x的演变" class="headerlink" title="Hadoop1.x - Hadoop2.x的演变"></a>Hadoop1.x - Hadoop2.x的演变</h4><p><img src="/../images/hadoop/image-20240316205321093.png" alt="image-20240316205321093"></p><h4 id="Hadoop-1-X、2-X、3-X区别"><a href="#Hadoop-1-X、2-X、3-X区别" class="headerlink" title="Hadoop 1.X、2.X、3.X区别"></a>Hadoop 1.X、2.X、3.X区别</h4><ul><li><p>1.X</p></li><li><ul><li>MapReduce（计算+资源调度）</li><li>HDFS（数据存储）</li><li>Common（辅助工具）</li></ul></li><li><p>2.X</p></li><li><ul><li>MapReduce（计算）</li><li>Yarn（资源调度）</li><li>HDFS（数据存储）</li><li>Common（辅助工具）</li></ul></li><li><p>3.X：组成上没有变化</p></li></ul><h4 id="Hadoop2-x与Hadoop3-x区别对比"><a href="#Hadoop2-x与Hadoop3-x区别对比" class="headerlink" title="Hadoop2.x与Hadoop3.x区别对比"></a>Hadoop2.x与Hadoop3.x区别对比</h4><h6 id="License"><a href="#License" class="headerlink" title="License"></a>License</h6><ul><li>Hadoop 2.x - Apache 2.0，开源</li><li>Hadoop 3.x - Apache 2.0，开源</li></ul><h6 id="支持的最低Java版本"><a href="#支持的最低Java版本" class="headerlink" title="支持的最低Java版本"></a>支持的最低Java版本</h6><ul><li>Hadoop 2.x - java的最低支持版本是java 7</li><li>Hadoop 3.x - java的最低支持版本是java 8</li></ul><h6 id="容错"><a href="#容错" class="headerlink" title="容错"></a>容错</h6><ul><li>Hadoop 2.x - 可以通过复制（浪费空间）来处理容错。</li><li>Hadoop 3.x - 可以通过Erasure编码处理容错。</li></ul><h6 id="数据平衡"><a href="#数据平衡" class="headerlink" title="数据平衡"></a>数据平衡</h6><ul><li>Hadoop 2.x - 对于数据，平衡使用HDFS平衡器。</li><li>Hadoop 3.x - 对于数据，平衡使用Intra-data节点平衡器，该平衡器通过HDFS磁盘平衡器CLI调用。</li></ul><h6 id="存储Scheme"><a href="#存储Scheme" class="headerlink" title="存储Scheme"></a>存储Scheme</h6><ul><li>Hadoop 2.x - 使用3X副本Scheme。</li><li>Hadoop 3.x - 支持HDFS中的擦除编码。</li></ul><h6 id="存储开销"><a href="#存储开销" class="headerlink" title="存储开销"></a>存储开销</h6><ul><li><p>Hadoop 2.x - HDFS在存储空间中有200％的开销。</p></li><li><p>Hadoop 3.x - 存储开销仅为50％。</p></li><li><p>存储开销示例</p></li><li><ul><li>Hadoop 2.x - 如果有6个块，那么由于副本方案（Scheme），将有18个块占用空间。</li><li>Hadoop 3.x - 如果有6个块，那么将有9个块占用6块空间，3个用于奇偶校验。</li></ul></li></ul><h6 id="YARN时间线服务"><a href="#YARN时间线服务" class="headerlink" title="YARN时间线服务"></a>YARN时间线服务</h6><ul><li>Hadoop 2.x - 使用具有可伸缩性问题的旧时间轴服务。</li><li>Hadoop 3.x - 改进时间线服务v2并提高时间线服务的可扩展性和可靠性。</li></ul><h6 id="默认端口范围"><a href="#默认端口范围" class="headerlink" title="默认端口范围"></a>默认端口范围</h6><ul><li>Hadoop 2.x - 在Hadoop 2.0中，一些默认端口是Linux临时端口范围。所以在启动时，他们将无法绑定。</li><li>Hadoop 3.x - 但是在Hadoop 3.0中，这些端口已经移出了短暂的范围。</li></ul><h6 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h6><ul><li>Hadoop 2.x - 使用Hive，pig，Tez，Hama，Giraph和其他Hadoop工具。</li><li>Hadoop 3.x - 可以使用Hive，pig，Tez，Hama，Giraph和其他Hadoop工具。</li></ul><h6 id="兼容的文件系统"><a href="#兼容的文件系统" class="headerlink" title="兼容的文件系统"></a>兼容的文件系统</h6><ul><li>Hadoop 2.x - HDFS（默认FS），FTP文件系统：它将所有数据存储在可远程访问的FTP服务器上。Amazon S3（简单存储服务）文件系统Windows Azure存储Blob（WASB）文件系统。</li><li>Hadoop 3.x - 它支持所有前面以及Microsoft Azure Data Lake文件系统。</li></ul><h6 id="Datanode资源"><a href="#Datanode资源" class="headerlink" title="Datanode资源"></a>Datanode资源</h6><ul><li>Hadoop 2.x - Datanode资源不专用于MapReduce，我们可以将它用于其他应用程序。</li><li>Hadoop 3.x - 此处数据节点资源也可用于其他应用程序。</li></ul><h6 id="MR-API兼容性"><a href="#MR-API兼容性" class="headerlink" title="MR API兼容性"></a>MR API兼容性</h6><ul><li>Hadoop 2.x - 与Hadoop 1.x程序兼容的MR API，可在Hadoop 2.X上执行。</li><li>Hadoop 3.x - 此处，MR API与运行Hadoop 1.x程序兼容，以便在Hadoop 3.X上执行。</li></ul><h6 id="支持Microsoft-Windows"><a href="#支持Microsoft-Windows" class="headerlink" title="支持Microsoft Windows"></a>支持Microsoft Windows</h6><ul><li>Hadoop 2.x - 它可以部署在Windows上。</li><li>Hadoop 3.x - 它也支持Microsoft Windows。</li></ul><h6 id="插槽-容器"><a href="#插槽-容器" class="headerlink" title="插槽/容器"></a>插槽/容器</h6><ul><li>Hadoop 2.x - Hadoop 1适用于插槽的概念，但Hadoop 2.X适用于容器的概念。通过容器，我们可以运行通用任务。</li><li>Hadoop 3.x - 它也适用于容器的概念。</li></ul><h6 id="单点故障"><a href="#单点故障" class="headerlink" title="单点故障"></a>单点故障</h6><ul><li>Hadoop 2.x - 具有SPOF的功能，因此只要Namenode失败，它就会自动恢复。</li><li>Hadoop 3.x - 具有SPOF的功能，因此只要Namenode失败，它就会自动恢复，无需人工干预就可以克服它。</li></ul><h6 id="HDFS联盟"><a href="#HDFS联盟" class="headerlink" title="HDFS联盟"></a>HDFS联盟</h6><ul><li>Hadoop 2.x - 在Hadoop 1.0中，只有一个NameNode来管理所有Namespace，但在Hadoop 2.0中，多个NameNode用于多个Namespace。</li><li>Hadoop 3.x - Hadoop 3.x还有多个名称空间用于多个名称空间。</li></ul><h6 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h6><ul><li>Hadoop 2.x - 我们可以扩展到每个群集10,000个节点。</li><li>Hadoop 3.x - 更好的可扩展性。我们可以为每个群集扩展超过10,000个节点。</li></ul><h6 id="访问数据"><a href="#访问数据" class="headerlink" title="访问数据"></a>访问数据</h6><ul><li>Hadoop 2.x - 由于数据节点缓存，我们可以快速访问数据。</li><li>Hadoop 3.x - 这里也通过Datanode缓存我们可以快速访问数据。</li></ul><h6 id="HDFS快照"><a href="#HDFS快照" class="headerlink" title="HDFS快照"></a>HDFS快照</h6><ul><li>Hadoop 2.x - Hadoop 2增加了对快照的支持。它为用户错误提供灾难恢复和保护。</li><li>Hadoop 3.x - Hadoop 2也支持快照功能。</li></ul><h6 id="平台"><a href="#平台" class="headerlink" title="平台"></a>平台</h6><ul><li>Hadoop 2.x - 可以作为各种数据分析的平台，可以运行事件处理，流媒体和实时操作。</li><li>Hadoop 3.x - 这里也可以在YARN的顶部运行事件处理，流媒体和实时操作。</li></ul><h6 id="群集资源管理"><a href="#群集资源管理" class="headerlink" title="群集资源管理"></a>群集资源管理</h6><ul><li>Hadoop 2.x - 对于群集资源管理，它使用YARN。它提高了可扩展性，高可用性，多租户。</li><li>Hadoop 3.x - 对于集群，资源管理使用具有所有功能的YARN。</li></ul><h2 id="Hadoop-生态系统"><a href="#Hadoop-生态系统" class="headerlink" title="Hadoop 生态系统"></a>Hadoop 生态系统</h2><p><img src="/../images/hadoop/image-20240316205548785.png" alt="image-20240316205548785"></p><p><img src="/../images/hadoop/image-20240316205558454.png" alt="image-20240316205558454"></p><h4 id="HDFS（Hadoop-Distributed-File-System）"><a href="#HDFS（Hadoop-Distributed-File-System）" class="headerlink" title="HDFS（Hadoop Distributed File System）"></a>HDFS（Hadoop Distributed File System）</h4><h6 id="产生背景"><a href="#产生背景" class="headerlink" title="产生背景"></a>产生背景</h6><ul><li>是分布式文件管理系统中的一种</li><li>通过目录树来定位文件</li><li><strong>适合一次写入，多次读出</strong>。一个文件经过创建、写入和关闭之后就不需要改变</li></ul><h6 id="架构概述"><a href="#架构概述" class="headerlink" title="架构概述"></a>架构概述</h6><ul><li><strong>NameNode</strong>（nn）：存储文件的元数据，如文件名，文件目录结构，文件属性（生成时间、副本数、文件权限），以及每个文件的块列表和块所在的DataNode等；配置副本策略；处理的客户端的读写请求</li><li><strong>DataNode</strong>（dn）：在本地文件系统存储文件块数据，以及块数据的校验和；执行数据块的读/写操作</li><li><strong>Secondary NameNode</strong>（2nn）：每隔一段时间对NameNode元数据备份；并非热备，当NameNode挂掉的时候，并不能马上替换NameNode并提供服务；紧急情况，可辅助恢复NameNode</li><li><strong>Client</strong>：将上传到HDFS的文件切分成块（128M / 256M）；与NameNode交互，获取文件位置信息；与DataNode交互，读取写入数据；管理HDFS，例如NameNode格式化，对HDFS增删改查</li></ul><h6 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h6><ul><li><p><strong>优点</strong></p></li><li><ul><li><strong>数据规模</strong> 能够达到GB、TB、PB级别</li><li><strong>文件规模</strong> 能够处理百万规模以上的文件数量</li><li>高容错性：数据自动保存多个副本，某一个副本丢失之后，可以自动恢复</li><li>适合处理大数据：</li><li>可构建在廉价的机器上：通过多副本机制，提高可靠性</li></ul></li><li><p><strong>缺点</strong></p></li><li><ul><li>不适合<strong>低延时</strong>数据访问：毫秒级的存储数据</li><li>无法高效的对大量<strong>小文件</strong>进行存储：存储大量小文件的话，会占用NameNode 大量的内存来存储文件目录和块信息，NameNode的内存总是有限的；小文件的存储的寻址时间会超过读取时间，违反了HDFS的设计目标</li><li>不支持并发写入、文件随机修改：一个文件只能有一个写，不允许多个线程同时写；<strong>仅支持数据追加</strong>，不支持文件的随机修改</li></ul></li></ul><h6 id="写数据流程"><a href="#写数据流程" class="headerlink" title="写数据流程"></a>写数据流程</h6><p><img src="/../images/hadoop/image-20240316205725307.png" alt="image-20240316205725307"></p><p><strong>最近距离计算</strong>：在HDFS写数据的过程中，NameNode会选择距离待上传数据最近距离的DataNode接受数据；节点距离（<strong>两个节点到达最近的共同祖先的距离总和</strong>）</p><p><strong>读数据流程</strong></p><p><img src="/../images/hadoop/image-20240316205816364.png" alt="image-20240316205816364"></p><p><strong>NameNode 工作机制</strong></p><p><img src="/../images/hadoop/image-20240316205831301.png" alt="image-20240316205831301"></p><ul><li>Fsimage 文件：HDFS 文件系统源数据的一个永久性的检查点，其中包含 HDFS 文件系统的所有目录和文件inode的序列化信息</li><li>Edits 文件：存放 HDFS 文件系统的所有更新操作的路径，文件系统客户端执行的所有写操作首先会被记录到 Edits 文件中</li><li>默认 1 小时检查执行一次，1 分钟检查一次操作次数，当操作次数达到 100 w 时，SecondaryNameNode 执行一次</li></ul><p><strong>DataNode 工作机制</strong></p><p><img src="/../images/hadoop/image-20240316205921002.png" alt="image-20240316205921002"></p><h4 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h4><h6 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h6><ul><li>MapReduce 是一个<strong>分布式运算程序</strong>的编程框架，是用户开发“基于 Hadoop 的数据分析应用”的核心框架</li><li>MapReduce 核心功能是将<strong>用户编写的业务逻辑代码</strong>和<strong>自带默认组件</strong>整合成一个完整的<strong>分布式运算程序</strong>，并发运行在一个 Hadoop 集群上</li></ul><h6 id="优缺点-1"><a href="#优缺点-1" class="headerlink" title="优缺点"></a>优缺点</h6><ul><li><p><strong>优点</strong></p></li><li><ul><li>易于编程：用户只需要关心业务逻辑，实现框架的接口</li><li>良好的扩展性：可以动态增加服务器，解决计算资源不够的问题</li><li>高容错性：任何一台机器挂掉，可以将任务转移到其他节点</li><li>适合海量数据计算（TB/PB） ：几千台服务器共同计算</li></ul></li><li><p><strong>缺点</strong></p></li><li><ul><li>不擅长实时计算（Mysql）</li><li>不擅长流式计算（SparkStreaming / Flink）</li><li>不擅长DAG有向无环图（计算出来的结果作为下一次计算的参数，迭代计算）计算（Spark）</li></ul></li></ul><h6 id="架构概述-1"><a href="#架构概述-1" class="headerlink" title="架构概述"></a>架构概述</h6><ul><li>Map 阶段并行处理输入数据</li><li>Reduce 阶段对 Map 结果进行汇总</li></ul><h6 id="MapReduce核心思想"><a href="#MapReduce核心思想" class="headerlink" title="MapReduce核心思想"></a>MapReduce核心思想</h6><p><img src="/../images/hadoop/image-20240316205952926.png" alt="image-20240316205952926"></p><h6 id="MapReduce-进程"><a href="#MapReduce-进程" class="headerlink" title="MapReduce 进程"></a>MapReduce 进程</h6><p>一个完整的 MapReduce 程序在分布式运行时有三类实例进程：</p><ul><li><strong>MrAppMaster</strong>：负责珍格格程序的过程调度及状态协调</li><li><strong>MapTask</strong>：负责 Map 阶段的整个数据处理流程</li><li><strong>ReduceTask</strong>：负责 Reduce 阶段的整个数据处理流程</li></ul><h6 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h6><p><strong>定义</strong></p><ul><li>序列化：把内存中的对象，转换成字节序列（或其他数据传输协议）以便于存储到磁盘（持久化）和网络传输</li><li>反序列化：将收到字节序列（或其他数据传输协议）或者是磁盘的持久化数据，转换成内存中的对象</li></ul><h6 id="InputFormat-数据输入"><a href="#InputFormat-数据输入" class="headerlink" title="InputFormat 数据输入"></a>InputFormat 数据输入</h6><p><strong>数据块和与数据切片</strong></p><ul><li>数据块：Block 是HDFS 物理上把数据分成一块一块，数据块是HDFS存储数据单位</li><li>数据切片：数据切片只是在逻辑上对输入进行分片，并不会在磁盘上将其切分成片进行存储。数据切片是MapReduce 程序计算输入数据的单位，一个切片会对应启动一个MapTask</li></ul><p><strong>切片机制</strong></p><ul><li>一个 Job 的 Map 阶段并行度由客户端再提交 Job 时的切片数决定</li><li>每个 Split 切片分配一个 MapTask 并行实例处理</li><li>默认情况下，切片大小 = BlockSize</li><li>切片时不考虑数据集整体，而是逐个针对每一个文件单独切片</li></ul><h6 id="Shuffle-机制"><a href="#Shuffle-机制" class="headerlink" title="Shuffle 机制"></a>Shuffle 机制</h6><p><strong>定义</strong>：Map 方法之后，Reduce 方法之前的数据处理过程称之为 Shuffle （打乱顺序，洗牌）</p><p><img src="/../images/hadoop/image-20240316210013981.png" alt="image-20240316210013981"></p><p><strong>分区排序</strong>：按照<strong>字典</strong>顺序对 <strong>Key</strong> 的索引使用<strong>快速排序</strong></p><p><strong>MapTask 工作机制</strong></p><p><img src="/../images/hadoop/image-20240316210031536.png" alt="image-20240316210031536"></p><p><strong>ReduceTask 工作机制</strong></p><p><img src="/../images/hadoop/image-20240316210056874.png" alt="image-20240316210056874"></p><p><strong>数据清洗-ETL（Extract-Tramsform-Load）</strong></p><p><strong>定义</strong></p><ul><li>用来描述将数据从来源端经过抽取（Extract）、转换（Transform）、加载（Load）至目的端的过程。ETL 一词较常用在数据仓库，但其对象并不限于数据仓库</li><li>在运行核心业务 MapReduce 程序之前，往往要先对数据进行清洗，清理掉不符合用户要求的数据。<strong>清理过程往往只需要 Mapper 程序，不需要运行 Reduce 程序</strong></li></ul><h4 id="YARN"><a href="#YARN" class="headerlink" title="YARN"></a>YARN</h4><p>Yarn 是一个资源调度平台，负责为运算程序提供服务器运算资源，相当于一个分布式的操作系统平台，而 MapReduce 等运算程序则相当于运行于操作系统之上的应用程序</p><h6 id="架构概述-2"><a href="#架构概述-2" class="headerlink" title="架构概述"></a>架构概述</h6><p><img src="/../images/hadoop/image-20240316210229364.png" alt="image-20240316210229364"></p><ul><li><p><strong>ResourceManager</strong>（RM）：整个集群资源（内存、CPU等）的管理者</p></li><li><p><strong>NodeManager</strong>（NM）：单个节点服务器的管理者</p></li><li><p><strong>ApplicationMaster</strong>（AM）：单个任务运行的负责人</p></li><li><p><strong>Container</strong>：容器，相当于一台独立的服务器，里面封装了任务运行所需要的资源（内存、CPU、磁盘、网络）</p></li><li><p>注意</p></li><li><ul><li>客户端可以有多个</li><li>集群上可以运行多个 ApplicationMaster</li><li>每个 NodeManager 上可以有多个 Container</li></ul></li></ul><h6 id="YARN-工作机制"><a href="#YARN-工作机制" class="headerlink" title="YARN 工作机制"></a>YARN 工作机制</h6><p><img src="/../images/hadoop/image-20240316210244493.png" alt="image-20240316210244493"></p><p><strong>HDFS、YARN、MapReduce 三者关系</strong></p><p><img src="/../images/hadoop/image-20240316210256567.png" alt="image-20240316210256567"></p><h6 id="YARN-调度器"><a href="#YARN-调度器" class="headerlink" title="YARN 调度器"></a>YARN 调度器</h6><p>Hadoop 作业调度器主要有三种：FIFO、容量、公平调度器。Hadoop 3.1.3 默认的资源调度器是容量调度器</p><p><strong>FIFO调度器</strong></p><ul><li>单队列，根据提交作业的先后顺序，先来先服务</li></ul><p><strong>容量调度器</strong></p><ul><li><p>是Yahoo开发的多用户调度器</p></li><li><p>多队列：每个队列可配置一定的资源量</p></li><li><p>容量保证：管理员可为每个队列设置资源最低保证和资源使用上限</p></li><li><p>灵活性：如果一个队列中的资源有剩余，可以暂时共享给那些需要资源的队列，而一旦该队列有新的应用和程序提交，则其他队列借调的资源会归还给该队列</p></li><li><p>多租户：支持多用户共享集群和多应用程序同时运行。为了防止同一个用户的作业独占队列中的资源，该调度器会对同一用户提交的作业所占资源量进行限定</p></li><li><p><strong>分配算法</strong></p></li><li><ul><li>队列资源分配：从root 开始，使用深度优先算法，<strong>优先选择资源占用率最低</strong>的队列分配资源</li><li>作业资源分配：默认按照提交作业的优先级和提交时间顺序分配资源</li><li>容器资源分配：按照容器的优先级分配资源，如果优先级相同，按照数据本地性原则</li></ul></li></ul><p><strong>公平调度器</strong></p><ul><li><p>是 Facebook 开发的多用户调度器</p></li><li><p>具有与容量调度器的相同特点</p></li><li><p>不同点为</p></li><li><ul><li>缺额：某一个时刻一个作业应获得资源和实际获取资源的差距叫“缺额”</li><li>核心调度策略不同（容量调度器优先选择<strong>资源利用率低</strong>的队列；公平调度器优先选择对资源的<strong>缺额</strong>比例大的队列）</li><li>每个队列可以单独设置资源分配方式（容量调度器：FIFO、DRF；公平调度器：FIFO、FAIR、DRF）</li></ul></li><li><p>更多关于大数据 Hadoop系列的学习文章，请参阅：<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0MDQ4MTM5NQ==&amp;action=getalbum&amp;album_id=2957050176765198340&amp;token=737685287&amp;lang=zh_CN#wechat_redirect">进击大数据</a>，本系列持续更新中。</p></li></ul><h4 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h4><p>Spark是加州大学伯克利分校AMP实验室（Algorithms, Machines, and People Lab）开发的通用内存并行<strong>计算框架</strong>，借鉴了MapReduce之上发展而来的，继承了其分布式并行计算的优点并改进了MapReduce明显的缺陷。使用场景如下：</p><ul><li><strong>复杂的批量处理（Batch Data Processing）</strong>，偏重点在于处理海量数据的能力，至于处理速度可忍受，通常的时间可能是在数十分钟到数小时；</li><li><strong>基于历史数据的交互式查询（Interactive Query）</strong>，通常的时间在数十秒到数十分钟之间</li><li><strong>基于实时数据流的数据处理（Streaming Data Processing）</strong>，通常在数百毫秒到数秒之间</li></ul><h4 id="Storm"><a href="#Storm" class="headerlink" title="Storm"></a>Storm</h4><p>Storm用于“连续计算”，对数据流做连续查询，在计算时就将结果以流的形式输出给用户。<strong>如今已被Flink替代</strong>。</p><h4 id="Flink"><a href="#Flink" class="headerlink" title="Flink"></a>Flink</h4><p>Apache Flink是一个<strong>面向数据流处理和批量数据处理</strong>的可分布式的开源<strong>计算框架</strong>，它基于同一个Flink流式执行模型（streaming execution model），能够支持流处理和批处理两种应用类型。由于流处理和批处理所提供的SLA(服务等级协议)是完全不相同， 流处理一般需要支持低延迟、Exactly-once保证，而批处理需要支持高吞吐、高效处理，所以在实现的时候通常是分别给出两套实现方法，或者通过一个独立的开源框架来实现其中每一种处理方案。</p><h4 id="Flume"><a href="#Flume" class="headerlink" title="Flume"></a>Flume</h4><p>一个可用的、可靠的、分布式的海量<strong>日志采集、聚合和传输系统</strong>。</p><h4 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h4><p>是为提供简单的数据操作而设计的<strong>分布式数据仓库</strong>，它提供了简单的类似SQL语法的HiveQL语言进行数据查询。</p><p><img src="/../images/hadoop/image-20240316210337881.png" alt="image-20240316210337881"></p><p><strong>Hive 架构原理</strong></p><p><img src="/../images/hadoop/image-20240316210355791.png" alt="image-20240316210355791"></p><ul><li><p><strong>用户接口（Client）</strong>：CLI（hive shell）、JDBC / ODBC（java 访问 hive）、WEBUI（浏览器访问 hive）</p></li><li><p><strong>元数据（Metastore）</strong>：元数据包括表名、表所属的数据库（默认是default）、表的拥有者、列 / 分区字段、表的类型（是否是外部表）、表的数据所在目录等；<strong>默认存储在自带的 derby 数据库中，推荐使用 MySQL 存储 Metastore</strong></p></li><li><p><strong>Hadoop</strong>：使用 HDFS 进行存储，使用 MapReduce 进行计算</p></li><li><p><strong>驱动器（Driver）</strong>：</p></li><li><ul><li>解析器（SQL Parser） ：将 SQL 字符串转换成抽象语法树 AST，这一步一般都用第三方工具库完成，比如 antlr；对 AST 进行语法分析，比如表是否存在、字段是否存在、SQL 语义是否有误</li><li>编译器（Physical Plan）：将 AST 编译生成逻辑执行计划</li><li>优化器（Query Optimizer）：对逻辑执行计划进行优化</li><li>执行器（Execution）：把逻辑执行计划转换成可以运行的物理计划。对于 Hive 来说，就是 MR/Spark</li></ul></li></ul><h6 id="运行机制"><a href="#运行机制" class="headerlink" title="运行机制"></a>运行机制</h6><p><img src="/../images/hadoop/image-20240316210414062.png" alt="image-20240316210414062"></p><p>Hive 通过给用户提供的一系列交互接口，接收到用户的指令（SQL），使用自己的 Driver，结合元数据（MetaStore），将这些指令翻译成 MapReduce，提交到 Hadoop 中执行，最后，将执行返回的结果输出到用户交互接口。</p><h4 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h4><p>分布式协调系统，Google Chubby的Java开源实现，是高可用的和可靠的分布式协同（coordination）系统，提供分布式锁之类的基本服务，用于构建分布式应用。</p><h4 id="Hbase"><a href="#Hbase" class="headerlink" title="Hbase"></a>Hbase</h4><p>基于Hadoop的<strong>分布式数据库</strong>，Google BigTable的开源实现 是一个有序、稀疏、多维度的映射表，有良好的伸缩性和高可用性，用来将数据存储到各个计算节点上。</p><h6 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h6><p>逻辑上，HBase 的数据模型同关系型数据库很类似，数据存储在一张表中，有行有列。但从底层物理存储结构（K-V）来看，HBase 更像是一个 multi-dimensional-map（多维 map）。</p><ul><li><p><strong>逻辑结构</strong></p><p><img src="/../images/hadoop/image-20240316210435008.png" alt="image-20240316210435008"></p></li><li><p><strong>物理存储结构</strong></p></li></ul><p><img src="/../images/hadoop/image-20240316210534259.png" alt="image-20240316210534259"></p><ul><li><p><strong>名词解释</strong></p></li><li><ul><li><strong>Name Space</strong>：命名空间，类似于关系型数据库的 database 概念，每个命名空间下有多个表。HBase 有两个自带的命名空间，分别是 <strong>hbase</strong> 和 <strong>default</strong>，hbase 中存放的是 HBase 内置的表，default 表是用户默认使用的命名空间</li><li><strong>Region</strong>：类似于关系型数据库的表概念。不同的是，HBase 定义代表时只需要声明<strong>列族</strong>即可，不需要声明具体的列。这意味着，往 HBase 写入数据时，字段可以动态、按需指定。因此，和关系型数据库相比，HBase 能够轻松应对字段变更的场景</li><li><strong>Row</strong>：HBase 表中的每行数据都由一个 RowKey 和多个 Column 组成，数据是按照 RowKey 的<strong>字典顺序存储</strong>的，并且查询数据时只能根据 RowKey 进行检索，所有 RowKey 的设计十分重要</li><li><strong>Column</strong>：HBase 中的每个列都由 <strong>Column Family 列族</strong> 和 <strong>Column Qualifier 列限定符</strong> 进行限定，例如info:name，info:age。建表时，只需指明列族，而列限定符无需预先定义</li><li><strong>Time Stamp</strong>：用于标识数据的不同版本，每条数据写入时，如果不指定时间戳，系统会自动为其加上该字段，其值为写入 HBase 的时间</li><li><strong>Cell</strong>：由 {rowkey,column Family:column Qualifier,time Stamp} 唯一确定的单元。cell中的数据是没有类型的，全部是<strong>字节码形式</strong>存储</li></ul></li></ul><h6 id="基本架构"><a href="#基本架构" class="headerlink" title="基本架构"></a>基本架构</h6><p><img src="/../images/hadoop/image-20240316210557038.png" alt="image-20240316210557038"></p><p><strong>Zookeeper的作用</strong>：HBase 通过 Zookeeper 来做 master 的高可用、RegionServer 的监控、元数据的入口以及集群配置的维护等工作。</p><p><strong>写数据流程</strong></p><p><img src="/../images/hadoop/image-20240316210638331.png" alt="image-20240316210638331"></p><p><strong>读数据流程</strong></p><p><img src="/../images/hadoop/image-20240316210647802.png" alt="image-20240316210647802"></p><h6 id="HBase-VS-Hive"><a href="#HBase-VS-Hive" class="headerlink" title="HBase VS Hive"></a>HBase VS Hive</h6><ul><li><p>Hive</p></li><li><ul><li>数据仓库：Hive 的本质其实就是相当于将 HDFS 中已经存储的文件在 Mysql 中做了一个双射关系，以方便使用 HQL 去管理查询。</li><li>用于数据分析、清晰：Hive 适用于离线的数据分析和清洗，延迟较高。</li><li>基于 HDFS、MapReduce：Hive 存储的数据依旧在 DataNode 上，编写 HQL 语句终将是转换为 MapReduce 代码执行。</li></ul></li><li><p>HBase</p></li><li><ul><li>数据库：是一种<strong>面向列族存储</strong>的非关系型数据库。</li><li>用于存储结构化和非结构化的数据：适用于单表非关系型数据的存储，不适合做关联查询，类似于JOIN等操作。</li><li>基于 HDFS：数据持久化存储的体现形式是 HFile，存放在 DataNode 中，被 RegionServer 以 region 的形式进行管理。</li><li>延迟较低，接入在线业务使用：面对大量的企业数据，HBase 可以直线单表大量数据的存储，同时提供了高效的数据访问速度。</li></ul></li><li><p>更多关于大数据 Hadoop系列的学习文章，请参阅：<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0MDQ4MTM5NQ==&amp;action=getalbum&amp;album_id=2957050176765198340&amp;token=737685287&amp;lang=zh_CN#wechat_redirect">进击大数据</a>，本系列持续更新中。</p></li></ul><h4 id="Cloudbase"><a href="#Cloudbase" class="headerlink" title="Cloudbase"></a>Cloudbase</h4><p>基于Hadoop的<strong>数据仓库</strong>，支持标准的SQL语法进行数据查询。</p><h4 id="Pig"><a href="#Pig" class="headerlink" title="Pig"></a>Pig</h4><p>大数据<strong>流处理系统</strong>，建立于Hadoop之上为并行计算环境提供了一套数据工作流语言和执行框架。</p><h4 id="Mahout"><a href="#Mahout" class="headerlink" title="Mahout"></a>Mahout</h4><p>基于HadoopMapReduce的大规模<strong>数据挖掘与机器学习算法库</strong>。</p><h4 id="Oozie"><a href="#Oozie" class="headerlink" title="Oozie"></a>Oozie</h4><p>MapReduce工作流管理系统。</p><h4 id="Sqoop"><a href="#Sqoop" class="headerlink" title="Sqoop"></a>Sqoop</h4><p>数据转移系统，是一个用来将Hadoop和关系型数据库中的数据相互转  移的工具，可以将一个关系型数据库中的数据导入Hadoop的HDFS中，也可以将HDFS 的数据导入关系型数据库中。</p><h4 id="Scribe"><a href="#Scribe" class="headerlink" title="Scribe"></a>Scribe</h4><p>Facebook开源的<strong>日志收集聚合框架系统</strong>。</p><p>这里只是列举了一部分Hadoop生态里的组件，稍微介绍了一下。</p><blockquote><p><em>参考来源如下：<a href="https://blog.csdn.net/weixin_43842853/article/">https://blog.csdn.net/weixin_43842853/article/</a></em></p><p><em>details/124316032 <a href="https://blog.csdn.net/weixin_43842853/article/">https://blog.csdn.net/weixin_43842853/article/</a></em></p><p><em>details/123007306 <a href="https://cnblogs.com/liugp/p/16100092.html">https://cnblogs.com/liugp/p/16100092.html</a></em></p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 大数据 Hadoop 系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux</title>
       <link href="/2024/03/16/Linux/"/>
       <url>/2024/03/16/Linux/</url>
@@ -115,33 +134,33 @@
     
     
     <entry>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>contact</title>
+      <link href="/contact/index.html"/>
+      <url>/contact/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/package.json"/>
       <url>/package.json</url>
       
         <content type="html"><![CDATA[{"dependencies":{"hexo-filter-github-emojis":"^3.0.5"}}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友链</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -159,31 +178,9 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>contact</title>
-      <link href="/contact/index.html"/>
-      <url>/contact/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -204,6 +201,28 @@
     
     <entry>
       <title></title>
+      <link href="/css/mycss.css"/>
+      <url>/css/mycss.css</url>
+      
+        <content type="html"><![CDATA[/* footer样式 */#footer {    background: #fff;    /* background: #fff url("/images/footer.jpg"); */    /* opacity: 0.3; */}#footer-wrap {    padding: 20px 20px;    /* color: var(--light-grey); */    color: #000;}#footer-wrap a{    color: #49b1f5;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/node_modules/hexo-filter-github-emojis/index.js"/>
       <url>/node_modules/hexo-filter-github-emojis/index.js</url>
       
@@ -215,32 +234,32 @@
     
     <entry>
       <title></title>
-      <link href="/node_modules/hexo-filter-github-emojis/update-emojis.js"/>
-      <url>/node_modules/hexo-filter-github-emojis/update-emojis.js</url>
-      
-        <content type="html"><![CDATA[const path = require("path");const fs = require("fs");const fetch = require("node-fetch");const randomUa = require("random-ua");// get the latest github versionfetch("https://api.github.com/emojis", {  headers: {    "User-Agent": randomUa.generate(),    "Content-Type": "application/json",  },})  .then((t) => t.json())  .then((json) => {    const latestEmojis = Object.keys(json).reduce((emojis, name) => {      emojis[name] = { src: json[name] };      const match = /\/unicode\/(\S+)\./.exec(json[name]);      if (match) {        emojis[name].codepoints = match[1].split("-");      }      return emojis;    }, {});    // update local backup    fs.writeFile(      path.join(__dirname, "emojis.json"),      JSON.stringify(latestEmojis, null, "  "),      function (err) {        if (err) {          console.warn(err);          process.exit(1);        } else {          console.log(`Update ${Object.keys(latestEmojis).length} emojis`);        }      }    );  })  .catch((error) => {    console.error(error);  });]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/mycss.css"/>
-      <url>/css/mycss.css</url>
-      
-        <content type="html"><![CDATA[/* footer样式 */#footer {    background: #fff;    /* background: #fff url("/images/footer.jpg"); */    /* opacity: 0.3; */}#footer-wrap {    padding: 20px 20px;    /* color: var(--light-grey); */    color: #000;}#footer-wrap a{    color: #49b1f5;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/node_modules/hexo-filter-github-emojis/package.json"/>
       <url>/node_modules/hexo-filter-github-emojis/package.json</url>
       
         <content type="html"><![CDATA[{"name":"hexo-filter-github-emojis","version":"3.0.5","description":"A Hexo plugin that adds emojis support, using Github Emojis API","main":"index","repository":"crimx/hexo-filter-github-emojis","engines":{"node":">=8.0.0"},"keywords":["hexo","hexo filter","hexo plugin","github emojis","github","emoji","emojis"],"author":"CRIMX <straybugs@gmail.com> (http://blog.crimx.com)","license":"MIT","dependencies":{"jsdom":"^19.0.0","node-fetch":"^3.2.3","random-ua":"^0.0.6"},"__npminstall_done":true,"_from":"hexo-filter-github-emojis@3.0.5","_resolved":"https://registry.npmmirror.com/hexo-filter-github-emojis/-/hexo-filter-github-emojis-3.0.5.tgz"}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/node_modules/hexo-filter-github-emojis/update-emojis.js"/>
+      <url>/node_modules/hexo-filter-github-emojis/update-emojis.js</url>
+      
+        <content type="html"><![CDATA[const path = require("path");const fs = require("fs");const fetch = require("node-fetch");const randomUa = require("random-ua");// get the latest github versionfetch("https://api.github.com/emojis", {  headers: {    "User-Agent": randomUa.generate(),    "Content-Type": "application/json",  },})  .then((t) => t.json())  .then((json) => {    const latestEmojis = Object.keys(json).reduce((emojis, name) => {      emojis[name] = { src: json[name] };      const match = /\/unicode\/(\S+)\./.exec(json[name]);      if (match) {        emojis[name].codepoints = match[1].split("-");      }      return emojis;    }, {});    // update local backup    fs.writeFile(      path.join(__dirname, "emojis.json"),      JSON.stringify(latestEmojis, null, "  "),      function (err) {        if (err) {          console.warn(err);          process.exit(1);        } else {          console.log(`Update ${Object.keys(latestEmojis).length} emojis`);        }      }    );  })  .catch((error) => {    console.error(error);  });]]></content>
       
     </entry>
     
