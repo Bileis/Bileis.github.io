@@ -6,7 +6,7 @@
   <link href="https://bileis.github.io/atom.xml" rel="self"/>
   
   <link href="https://bileis.github.io/"/>
-  <updated>2024-03-18T14:15:48.886Z</updated>
+  <updated>2024-03-18T14:34:10.318Z</updated>
   <id>https://bileis.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git问题解决</title>
+    <link href="https://bileis.github.io/2024/03/18/Git%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <id>https://bileis.github.io/2024/03/18/Git%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</id>
+    <published>2024-03-18T14:30:44.000Z</published>
+    <updated>2024-03-18T14:34:10.318Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-Git解决fatal-Could-not-read-from-remote-repository-的问题"><a href="#1-Git解决fatal-Could-not-read-from-remote-repository-的问题" class="headerlink" title="1.Git解决fatal: Could not read from remote repository.的问题"></a>1.Git解决fatal: Could not read from remote repository.的问题</h5><p>因为git仓库的用户信息和本地的用户信息不匹配造成的，解决方法也很简单，在git仓库中删除当前用户配置的key后重新生成并配置即可；</p><p>执行ssh-keygen –t rsa –C “git仓库邮箱”，重新生成密钥；</p><p>执行git config –global user.name “git用户名”，重新配置本地用户名；</p><p>执行git config –global user.email “git登录邮箱”，重新配置本地邮箱；</p><p>之后将生成在C:\Users\用户名.ssh文件夹下的id_rsa.pub文件打开后复制到Git仓库设置—SSH配置—Key配置的地方粘贴即可，如下图所示：</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1-Git解决fatal-Could-not-read-from-remote-repository-的问题&quot;&gt;&lt;a href=&quot;#1-Git解决fatal-Could-not-read-from-remote-repository-的问题&quot; class=&quot;hea</summary>
+      
+    
+    
+    
+    
+    <category term="Git所遇问题汇总" scheme="https://bileis.github.io/tags/Git%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux基本使用</title>

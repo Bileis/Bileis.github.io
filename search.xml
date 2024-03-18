@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Git问题解决</title>
+      <link href="/2024/03/18/Git%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+      <url>/2024/03/18/Git%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+      
+        <content type="html"><![CDATA[<h5 id="1-Git解决fatal-Could-not-read-from-remote-repository-的问题"><a href="#1-Git解决fatal-Could-not-read-from-remote-repository-的问题" class="headerlink" title="1.Git解决fatal: Could not read from remote repository.的问题"></a>1.Git解决fatal: Could not read from remote repository.的问题</h5><p>因为git仓库的用户信息和本地的用户信息不匹配造成的，解决方法也很简单，在git仓库中删除当前用户配置的key后重新生成并配置即可；</p><p>执行ssh-keygen –t rsa –C “git仓库邮箱”，重新生成密钥；</p><p>执行git config –global user.name “git用户名”，重新配置本地用户名；</p><p>执行git config –global user.email “git登录邮箱”，重新配置本地邮箱；</p><p>之后将生成在C:\Users\用户名.ssh文件夹下的id_rsa.pub文件打开后复制到Git仓库设置—SSH配置—Key配置的地方粘贴即可，如下图所示：</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Git所遇问题汇总 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux基本使用</title>
       <link href="/2024/03/18/Linux%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
       <url>/2024/03/18/Linux%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
