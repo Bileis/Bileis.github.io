@@ -171,20 +171,6 @@
   </url>
   
   <url>
-    <loc>https://bileis.github.io/tags/Hexo/</loc>
-    <lastmod>2024-03-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://bileis.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE-Hadoop-%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2024-03-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://bileis.github.io/tags/c-%E5%90%88%E9%9B%86/</loc>
     <lastmod>2024-03-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -192,7 +178,21 @@
   </url>
   
   <url>
+    <loc>https://bileis.github.io/tags/Hexo/</loc>
+    <lastmod>2024-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://bileis.github.io/tags/MySql%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2024-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://bileis.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE-Hadoop-%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2024-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
