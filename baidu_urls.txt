@@ -1,1 +1,1 @@
-https://bileis.github.io/2024/05/17/MySql%E8%A1%A8%E6%9F%A5%E8%AF%A2/
+https://bileis.github.io/2024/05/17/MongoDB/

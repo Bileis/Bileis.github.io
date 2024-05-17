@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://bileis.github.io/2024/05/17/MongoDB/</loc>
+    <lastmod>2024-05-17</lastmod>
+  </url>
+  <url>
     <loc>https://bileis.github.io/2024/05/17/MySql%E8%A1%A8%E6%9F%A5%E8%AF%A2/</loc>
     <lastmod>2024-05-17</lastmod>
   </url>
